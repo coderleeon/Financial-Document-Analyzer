@@ -1,0 +1,29 @@
+ API Documentation
+The FastAPI server provides a single endpoint for financial document analysis.
+
+POST /analyze/
+This endpoint accepts a financial document and a query, then returns a detailed analysis.
+
+URL: [your-public-ngrok-url]/analyze/
+
+Method: POST
+
+Request Body: multipart/form-data
+
+file (type: file, required): The PDF file to be analyzed.
+
+query (type: string, optional): A specific question or request for analysis. Defaults to "Provide comprehensive financial analysis".
+
+Successful Response:
+
+Status Code: 200 OK
+
+Content:
+
+
+
+{
+  "status": "success",
+  "filename": "financial_report.pdf",
+  "analysis": "A detailed financial analysis report based on the PDF content and query."
+}
